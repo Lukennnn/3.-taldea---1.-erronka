@@ -61,7 +61,7 @@
   <rect x="110" y="205" width="150" height="22" rx="4" fill="#2b3442" stroke="#60a5fa" stroke-width="1.2"/>
   <text x="185" y="220" text-anchor="middle" font-size="10" fill="#cfe0ff">Mostradorea</text>
   <use xlink:href="#pc" href="#pc" x="140" y="178" width="22" height="20"/><text x="152" y="174" text-anchor="middle" font-size="9" fill="#cfcfcf">PC-Arreta</text>
-  <use xlink:href="#prn" href="#prn" x="215" y="178" width="22" height="20"/><text x="226" y="174" text-anchor="middle" font-size="9" fill="#cfcfcf">imp_a</text>
+  <use xlink:href="#prn" href="#prn" x="215" y="178" width="22" height="20"/><text x="226" y="174" text-anchor="middle" font-size="9" fill="#cfcfcf">imp_a (kolorea)</text>
   <rect x="60" y="282" width="120" height="30" rx="8" fill="#26303d" stroke="#4b5b70"/>
   <text x="120" y="301" text-anchor="middle" font-size="10" fill="#cfe0ff">Itxarongela</text>
   <circle cx="250" cy="290" r="11" fill="none" stroke="#60a5fa" stroke-width="1.5"/><text x="250" y="294" text-anchor="middle" font-size="8" font-weight="700" fill="#60a5fa">AP</text>
@@ -70,27 +70,35 @@
   <text x="56" y="356" font-size="14" font-weight="800" fill="#f2f2f2">BULEGOAK</text>
   <text x="56" y="372" font-size="10" fill="#9ca3af">Administrazioa eta logistika</text>
   <rect x="200" y="344" width="80" height="18" rx="9" fill="#d97706"/><text x="240" y="357" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">Mugatua</text>
-  <rect x="62" y="405" width="90" height="42" rx="4" fill="#22302a" stroke="#4ade80" stroke-width="1.2"/>
-  <use xlink:href="#pc" href="#pc" x="96" y="412" width="22" height="20"/><text x="107" y="460" text-anchor="middle" font-size="9" fill="#cfcfcf">Administrazioa</text>
-  <rect x="170" y="405" width="90" height="42" rx="4" fill="#22302a" stroke="#4ade80" stroke-width="1.2"/>
-  <use xlink:href="#pc" href="#pc" x="204" y="412" width="22" height="20"/><text x="215" y="460" text-anchor="middle" font-size="9" fill="#cfcfcf">Logistika</text>
-  <use xlink:href="#prn" href="#prn" x="66" y="480" width="22" height="20"/><text x="95" y="494" font-size="9" fill="#cfcfcf">imp_m</text>
+  <g font-size="9" fill="#cfcfcf">
+    <rect x="58" y="386" width="104" height="36" rx="4" fill="#22302a" stroke="#4ade80" stroke-width="1.2"/>
+    <use xlink:href="#pc" href="#pc" x="66" y="394" width="22" height="20"/><text x="94" y="408">Lanpostua 1</text>
+    <rect x="172" y="386" width="104" height="36" rx="4" fill="#22302a" stroke="#4ade80" stroke-width="1.2"/>
+    <use xlink:href="#pc" href="#pc" x="180" y="394" width="22" height="20"/><text x="208" y="408">Lanpostua 2</text>
+    <rect x="58" y="432" width="104" height="36" rx="4" fill="#22302a" stroke="#4ade80" stroke-width="1.2"/>
+    <use xlink:href="#pc" href="#pc" x="66" y="440" width="22" height="20"/><text x="94" y="454">Lanpostua 3</text>
+    <rect x="172" y="432" width="104" height="36" rx="4" fill="#22302a" stroke="#4ade80" stroke-width="1.2"/>
+    <use xlink:href="#pc" href="#pc" x="180" y="440" width="22" height="20"/><text x="208" y="454">Lanpostua 4</text>
+  </g>
+  <use xlink:href="#prn" href="#prn" x="62" y="484" width="22" height="20"/><text x="90" y="498" font-size="9" fill="#cfcfcf">imp_m (A4/A3)</text>
 
   <!-- ===== EKIPO-GELA ===== -->
   <text x="56" y="556" font-size="14" font-weight="800" fill="#f2f2f2">EKIPO-GELA</text>
   <text x="56" y="572" font-size="10" fill="#9ca3af">Zerbitzariak eta sarea</text>
   <rect x="200" y="544" width="80" height="18" rx="9" fill="#dc2626"/><text x="240" y="557" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">IT soilik</text>
+  <text x="108" y="588" text-anchor="middle" font-size="9" fill="#c4b5fd">Rack 19" 18U</text>
   <g font-size="8.5" text-anchor="middle" fill="#fff">
-    <rect x="62" y="590" width="92" height="124" rx="4" fill="#0a0a0a" stroke="#a855f7" stroke-width="1.5"/>
-    <rect x="68" y="596" width="80" height="18" rx="2" fill="#ff4500"/><text x="108" y="608" font-weight="700">pfSense</text>
-    <rect x="68" y="617" width="80" height="18" rx="2" fill="#3f3f46"/><text x="108" y="629">Switch 24p</text>
-    <rect x="68" y="638" width="80" height="18" rx="2" fill="#6b21a8"/><text x="108" y="650">Zerbitzaria</text>
-    <rect x="68" y="659" width="80" height="18" rx="2" fill="#6b21a8"/><text x="108" y="671">NAS</text>
-    <rect x="68" y="680" width="80" height="28" rx="2" fill="#166534"/><text x="108" y="697">SAI 1500VA</text>
+    <rect x="62" y="592" width="92" height="130" rx="4" fill="#0a0a0a" stroke="#a855f7" stroke-width="1.5"/>
+    <rect x="68" y="597" width="80" height="17" rx="2" fill="#ff4500"/><text x="108" y="609" font-weight="700">Router/FW</text>
+    <rect x="68" y="617" width="80" height="17" rx="2" fill="#3f3f46"/><text x="108" y="629">Switch 24p PoE+</text>
+    <rect x="68" y="637" width="80" height="17" rx="2" fill="#3f3f46"/><text x="108" y="649">Patch panel</text>
+    <rect x="68" y="657" width="80" height="17" rx="2" fill="#6b21a8"/><text x="108" y="669">Zerbitzaria</text>
+    <rect x="68" y="677" width="80" height="17" rx="2" fill="#6b21a8"/><text x="108" y="689">NAS</text>
+    <rect x="68" y="697" width="80" height="19" rx="2" fill="#166534"/><text x="108" y="710">SAI 1500VA</text>
   </g>
-  <text x="108" y="726" text-anchor="middle" font-size="9" fill="#c4b5fd">Rack 19"</text>
-  <rect x="172" y="595" width="80" height="38" rx="4" fill="#2a2235" stroke="#a855f7" stroke-width="1.2"/>
-  <use xlink:href="#pc" href="#pc" x="201" y="601" width="22" height="20"/><text x="212" y="646" text-anchor="middle" font-size="9" fill="#cfcfcf">PC_IT</text>
+  <rect x="166" y="595" width="92" height="40" rx="4" fill="#2a2235" stroke="#a855f7" stroke-width="1.2"/>
+  <use xlink:href="#pc" href="#pc" x="178" y="603" width="22" height="20"/><use xlink:href="#pc" href="#pc" x="222" y="603" width="22" height="20"/>
+  <text x="212" y="648" text-anchor="middle" font-size="9" fill="#cfcfcf">IT: 2 eramangarri</text>
   <rect x="270" y="650" width="22" height="62" fill="#3a1414" stroke="#ef4444" stroke-width="1.5"/>
   <text x="281" y="681" text-anchor="middle" font-size="8" fill="#fca5a5" transform="rotate(-90 281 681)">Koadro elek.</text>
   <polygon points="240,662 256,690 224,690" fill="#facc15" stroke="#111"/><text x="240" y="687" text-anchor="middle" font-size="13" font-weight="800" fill="#111">!</text>
@@ -126,7 +134,7 @@
   <text x="405" y="404" text-anchor="middle" font-size="11" font-weight="700" fill="#ffb08a">ECU diagnosi-gunea</text>
   <use xlink:href="#pc" href="#pc" x="350" y="413" width="22" height="20"/><text x="361" y="446" text-anchor="middle" font-size="9" fill="#cfcfcf">PC_TAILERRA</text>
   <rect x="410" y="416" width="34" height="16" rx="3" fill="#0f0f0f" stroke="#ffb08a"/><text x="427" y="428" text-anchor="middle" font-size="8" fill="#ffb08a">OBD</text>
-  <use xlink:href="#prn" href="#prn" x="492" y="410" width="22" height="20"/><text x="503" y="444" text-anchor="middle" font-size="9" fill="#cfcfcf">imp_t</text>
+  <use xlink:href="#prn" href="#prn" x="492" y="410" width="22" height="20"/><text x="503" y="444" text-anchor="middle" font-size="9" fill="#cfcfcf">imp_t</text><text x="503" y="455" text-anchor="middle" font-size="8" fill="#9a9a9a">(laser)</text>
 
   <!-- Piezen biltegia -->
   <rect x="560" y="385" width="230" height="50" rx="4" fill="#262016" stroke="#a3824a" stroke-width="1.5"/>
@@ -168,6 +176,18 @@
   <rect x="60" y="244" width="22" height="20" rx="3" fill="#dc2626"/><text x="71" y="258" text-anchor="middle" font-size="9" font-weight="800" fill="#fff">SU</text>
   <rect x="306" y="226" width="60" height="16" rx="3" fill="#facc15"/><text x="336" y="238" text-anchor="middle" font-size="8" font-weight="800" fill="#111">LANGILEAK</text>
 
+  <!-- Sarbide-kontrola (RFID / PIN) -->
+  <g font-size="7.5" font-weight="800" text-anchor="middle" fill="#111">
+    <rect x="308" y="300" width="34" height="13" rx="3" fill="#fbbf24"/><text x="325" y="310">RFID</text>
+    <rect x="308" y="490" width="34" height="13" rx="3" fill="#fbbf24"/><text x="325" y="500">RFID</text>
+    <rect x="164" y="334" width="34" height="13" rx="3" fill="#fbbf24"/><text x="181" y="344">RFID</text>
+    <rect x="146" y="534" width="58" height="13" rx="3" fill="#fbbf24"/><text x="175" y="544">RFID+PIN</text>
+  </g>
+  <!-- CCTV sarreran -->
+  <g transform="translate(52,150)">
+    <rect x="0" y="0" width="36" height="14" rx="3" fill="#0a0a0a" stroke="#9ca3af"/><circle cx="7" cy="7" r="3" fill="#ef4444"/><text x="23" y="10.5" text-anchor="middle" font-size="7.5" font-weight="800" fill="#e5e5e5">CCTV</text>
+  </g>
+
   <!-- ===== LEGENDA ===== -->
   <rect x="925" y="100" width="250" height="630" rx="10" fill="#141414" stroke="#2a2a2a"/>
   <text x="945" y="130" font-size="15" font-weight="800" fill="#ff4500">LEGENDA</text>
@@ -187,7 +207,7 @@
     <rect x="950" y="340" width="20" height="20" rx="3" fill="#16a34a"/><text x="960" y="356" text-anchor="middle" font-size="16" font-weight="800" fill="#fff">+</text><text x="984" y="355">Lehen sorospenak</text>
     <circle cx="960" cy="378" r="11" fill="#1d4ed8"/><text x="960" y="381" text-anchor="middle" font-size="7" font-weight="800" fill="#fff">BEB</text><text x="984" y="376">Babes-ekipoa</text><text x="984" y="389">derrigorrezkoa</text>
     <rect x="945" y="400" width="30" height="14" rx="3" fill="#facc15"/><text x="984" y="411">Langileak soilik</text>
-    <g transform="translate(953,420)"><rect x="0" y="6" width="13" height="10" rx="2" fill="#c4b5fd"/><path d="M3,6 V3 A3.5,3.5 0 0,1 10,3 V6" fill="none" stroke="#c4b5fd" stroke-width="2"/></g><text x="984" y="435">Txartelarekin sartzea</text>
+    <g transform="translate(953,420)"><rect x="0" y="6" width="13" height="10" rx="2" fill="#c4b5fd"/><path d="M3,6 V3 A3.5,3.5 0 0,1 10,3 V6" fill="none" stroke="#c4b5fd" stroke-width="2"/></g><text x="984" y="435">Giltzapean (ekipo-gela)</text>
   </g>
 
   <text x="945" y="470" font-size="11" font-weight="700" fill="#9ca3af">EKIPOAK</text>
@@ -196,15 +216,16 @@
     <use xlink:href="#prn" href="#prn" x="948" y="504" width="22" height="20"/><text x="984" y="519">Inprimagailua</text>
     <circle cx="959" cy="541" r="10" fill="none" stroke="#60a5fa" stroke-width="1.5"/><text x="959" y="544" text-anchor="middle" font-size="7" font-weight="700" fill="#60a5fa">AP</text><text x="984" y="545">Wi-Fi sarbide-puntua</text>
     <rect x="948" y="558" width="22" height="16" fill="none" stroke="#ff4500" stroke-width="1.5" stroke-dasharray="4 3"/><text x="984" y="571">Altxagailua (lan-gunea)</text>
+    <rect x="945" y="582" width="30" height="13" rx="3" fill="#fbbf24"/><text x="960" y="592" text-anchor="middle" font-size="7.5" font-weight="800" fill="#111">RFID</text><text x="984" y="593">Sarbide-kontrola (RFID / PIN)</text>
+    <rect x="945" y="603" width="30" height="13" rx="3" fill="#0a0a0a" stroke="#9ca3af"/><circle cx="951" cy="609.5" r="2.5" fill="#ef4444"/><text x="984" y="614">CCTV kamera (sarrera)</text>
   </g>
 
-  <text x="945" y="606" font-size="11" font-weight="700" fill="#9ca3af">HONDAKINAK</text>
+  <text x="945" y="642" font-size="11" font-weight="700" fill="#9ca3af">HONDAKINAK</text>
   <g font-size="10.5" fill="#e5e5e5">
-    <rect x="945" y="616" width="14" height="14" rx="2" fill="#78350f"/><text x="967" y="627">Olio erabilia</text>
-    <rect x="1060" y="616" width="14" height="14" rx="2" fill="#ea580c"/><text x="1082" y="627">Bateriak</text>
-    <rect x="945" y="638" width="14" height="14" rx="2" fill="#3f3f46"/><text x="967" y="649">Pneumatikoak</text>
-    <rect x="1060" y="638" width="14" height="14" rx="2" fill="#eab308"/><text x="1082" y="649">RAEE</text>
-    <rect x="945" y="660" width="14" height="14" rx="2" fill="#52525b"/><text x="967" y="671">Hondakin arruntak</text>
+    <rect x="945" y="652" width="14" height="14" rx="2" fill="#78350f"/><text x="967" y="663">Olio erabilia</text>
+    <rect x="1060" y="652" width="14" height="14" rx="2" fill="#ea580c"/><text x="1082" y="663">Bateriak</text>
+    <rect x="945" y="674" width="14" height="14" rx="2" fill="#3f3f46"/><text x="967" y="685">Pneumatikoak</text>
+    <rect x="1060" y="674" width="14" height="14" rx="2" fill="#eab308"/><text x="1082" y="685">RAEE</text>
+    <rect x="945" y="696" width="14" height="14" rx="2" fill="#52525b"/><text x="967" y="707">Hondakin arruntak</text>
   </g>
-  <text x="945" y="708" font-size="9.5" fill="#6b6b6b">3. taldea · 1. Erronka</text>
 </svg>
