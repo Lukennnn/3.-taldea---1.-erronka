@@ -1,3 +1,7 @@
+---
+permalink: /
+---
+
 # TungTunning — Proiektuaren Dokumentazioa
 
 **Enpresa:** TungTunning (tuning tailerra) · **Taldea:** 3. taldea
@@ -5,14 +9,14 @@
 
 ## Asignaturak
 
-- [WAE — Web Aplikazioak](wae.md)
-- [Sistema Eragileak](sistema-eragileak.md)
-- [Sare Zerbitzuak](sare-zerbitzuak.md)
-- [Sistema Banatuak](sistema-banatuak.md)
-- [Datu-baseak](datu-baseak.md)
-- [Segurtasuna](segurtasuna.md)
-- [Hardwarea](hardware.md)
-- [Jasangarritasuna](jasangarritasuna.md)
+- [WAE — Web Aplikazioak](1-wae.md)
+- [Sistema Eragileak](2-sistema-eragileak.md)
+- [Sare Zerbitzuak](3-sare-zerbitzuak.md)
+- [Sistema Banatuak](4-sistema-banatuak.md)
+- [Datu-baseak](5-datu-baseak.md)
+- [Segurtasuna](6-segurtasuna.md)
+- [Hardwarea](7-hardware.md)
+- [Jasangarritasuna](8-jasangarritasuna.md)
 
 ## Irudiak
 
