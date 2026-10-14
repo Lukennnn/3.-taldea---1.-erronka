@@ -36,21 +36,39 @@ TungTunningeko azpiegitura **IsardVDI** gainean dago (nabigatzailetik atzitzen d
 
 **Sareak:** makina guztiak `192.168.10.0/24` sare berean daude, pfSense atebidearen atzean.
 
-<!-- Argazkia: IsardVDI panela makina birtual guztiekin (izena, SE, IP, egoera). -->
-![](irudiak/sb-01-argazkia.png)
+IsardVDI panela makina birtual guztiekin (izena, SE, IP eta egoera ikusgai):
 
+![](irudiak/se-1-1.png)
+![](irudiak/se-1-2.png)
 
 ---
 
-## 3. Zerbitzuen banaketa: VM eta edukiontziak
+## 3. Zerbitzu banatuen ebidentzia
+
+Zerbitzuak makina desberdinetan banatuta daude. Hona hemen zerbitzari nagusian (`192.168.10.1`) martxan dauden zerbitzuetako batzuen ebidentzia:
+
+**DNS zerbitzua** (zona zuzena, `3taldea.lan`):
+
+![](irudiak/sz-5a.png)
+
+**DHCP zerbitzua** (`DHCP_tunning` esparrua: tartea, esklusioa eta aukerak):
+
+![](irudiak/sz-6a-1.png)
+![](irudiak/sz-6a-2.png)
+
+Gainerako zerbitzuak beste makinetan daude banatuta: inprimaketa CUPS makinan (`.67`), bideo-deiak Jitsi makinan (`.5`), eta abar. Horien kaptura zehatzak dagozkien dokumentuetan daude (*Sare Zerbitzuak*, *Sistema Eragileak*).
+
+---
+
+## 4. Zerbitzuen banaketa: VM eta edukiontziak
 
 Errubrikak zerbitzu bat **makina birtual batean** eta beste bat **edukiontzi (container) batean** egotea eskatzen du.
 
-### 3.1. Makina birtualeko zerbitzua (eginda)
+### 4.1. Makina birtualeko zerbitzua (eginda)
 
 Zerbitzuak VM independenteetan daude (ikus goiko taula). Adibidez, **Jitsi** bere Ubuntu 24.04 makina birtualean dago (`192.168.10.5`), gainerako zerbitzuetatik isolatuta.
 
-### 3.2. Edukiontziko zerbitzua (proposamena / egiteko)
+### 4.2. Edukiontziko zerbitzua (proposamena / egiteko)
 
 Edukiontzi bat gehitzeko, **Docker** erabil daiteke VM baten barruan, zerbitzu bat edukiontzi gisa abiarazteko. Adibide errazak:
 
@@ -71,7 +89,7 @@ Horrela, zerbitzu bera **birtualizazio bidez** (VM) eta **edukiontzi bidez** (Do
 
 ---
 
-## 4. Erabilgarritasun handia (High Availability)
+## 5. Erabilgarritasun handia (High Availability)
 
 Zerbitzuen erabilgarritasuna bermatzeko neurriak:
 
@@ -84,7 +102,7 @@ Zerbitzuen erabilgarritasuna bermatzeko neurriak:
 
 ---
 
-## 5. Laburpena
+## 6. Laburpena
 
 - [x] Sistema banatuaren beharra justifikatua
 - [x] Birtualizazio-tresna (IsardVDI) eta makinak dokumentatuta
