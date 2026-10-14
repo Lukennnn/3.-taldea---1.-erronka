@@ -136,7 +136,23 @@ Jitsik **ondo funtzionatzen du** domeinuko bi erabiltzaileren artean: `luken` et
 ![](irudiak/sz-12d.png)
 
 
-### 4.3. Diseinu-erabakia
+### 4.3. Atakak
+
+Jitsi Meet-en instalazio lehenetsiak ataka hauek erabiltzen ditu; pfSensen eta Ubuntuko suebakian irekita egon behar dute:
+
+| Ataka | Protokoloa | Zerbitzua | Erabilera |
+|---|---|---|---|
+| 80 | TCP | nginx | HTTP → HTTPSra birbideratzea |
+| 443 | TCP | nginx | HTTPS: web-interfazea (`https://jitsi.tuning.eus`) |
+| 10000 | UDP | jitsi-videobridge2 | Audio eta bideo fluxuak (RTP) |
+
+Zerbitzarian entzuten dauden atakak egiaztatzeko:
+
+```bash
+sudo ss -tulpn | grep -E ':(80|443|10000)\b'
+```
+
+### 4.4. Diseinu-erabakia
 
 Erabiltzailearen erabakiz, Jitsi **autentifikaziorik gabe** eta **parametroak aldatu gabe** utzi da, oinarrizko instalazioa egonkor mantentzeko.
 
@@ -151,6 +167,7 @@ Erabiltzailearen erabakiz, Jitsi **autentifikaziorik gabe** eta **parametroak al
 - [x] DHCP (`DHCP_tunning`): tartea, esklusioa, erreserba, aukerak
 - [x] DHCP egiaztatua bezeroan (`ipconfig /all`)
 - [x] Jitsi martxan, bi erabiltzaileren artean frogatua
+- [x] Jitsiren atakak dokumentatuta (80, 443 TCP · 10000 UDP)
 - [ ] *Erabakita ez egitea:* Jitsi autentifikazioa/parametro aurreratuak
 
 ---
