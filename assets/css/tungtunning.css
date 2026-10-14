@@ -224,3 +224,6 @@ a:hover { text-decoration: underline; }
   .pager { grid-template-columns: 1fr; }
   .pager-link.next { grid-column: 1; }
 }
+
+/* Kode-blokeak: atzealde iluna mantendu */
+.content pre.highlight { background: var(--black); }
