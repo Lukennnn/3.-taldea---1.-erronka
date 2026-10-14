@@ -166,21 +166,28 @@ Ekipo informatikoak **RAEE** (Tresna Elektriko eta Elektronikoen Hondakinak) dir
 
 ## 10. Tailerraren planoa
 
-TungTunningen informatika-tailerraren planoa egin dugu: elementu bakoitza non dagoen, hondakin-edukiontziak eta arrisku-seinaleak adierazita.
+TungTunningen instalazioen planoa egin dugu: gune bakoitza bere sarbide-mailarekin, dokumentatutako ekipo guztiak non dauden, hondakin-edukiontziak eta segurtasun-seinaleak.
 
-![TungTunning informatika-tailerraren planoa](irudiak/hw-02-planoa.svg)
+![TungTunning tailerraren planoa](irudiak/hw-02-planoa.svg)
 
-Elementuak honela kokatu ditugu:
+### Guneak eta ekipoak
 
-- **Lan-mahaiak** (4) tailerraren erdian daude, eta bakoitzak **ESD alfonbra** du. Mahaien artean ESD seinaleak daude, eskumuturreko antiestatikoa derrigorrezkoa dela gogorarazteko (ikus 7. atala).
-- **Ekipo-gela** gune itxi eta bereizi bat da, **IT sailarentzat soilik** (txartelarekin sartzen da, *Segurtasuna* dokumentuko sarbide fisikoaren politikaren arabera). Bertan dago **rack-a** (19" 18U): router/firewall, switch kudeatua 24p PoE+, patch panela, zerbitzari fisikoa, NAS (babeskopiak) eta SAI 1500VA (ikus 3. atala).
-- **Koadro elektrikoa** ekipo-gelan dago, **arrisku elektrikoaren seinalearekin**, eta ondoan **CO2zko su-itzalgailua**. CO2 erabiltzen dugu urak edo hautsak ekipo elektronikoak hondatzen dituztelako.
-- **Proba-mahaia** ekipo-gelaren ondoan dago, elikadura-iturriak eta osagaiak probatzeko, lan-mahaietatik bereizita.
-- **Osagaien biltegia** (apalak) eta **tresna-armairua** (bihurkinak, pintzak, pasta termikoa...) lan-mahaietatik gertu daude, muntaketan eskura izateko.
-- **Hondakinen gunea** sarreratik gertu dago, edukiontziak ateratzeko tailer osoa zeharkatu behar ez izateko. Bost edukiontzi bereizi: **RAEE**, **pilak eta bateriak**, **metala**, **plastikoa** eta **hondakin arruntak**. RAEE gestore baimenduari entregatzen zaio, diskoetako datuak ezabatu ondoren (ikus 9. atala).
-- **Bi larrialdi-irteera** daude, sarreran eta ezkerreko horman, biak seinaleztatuta. Sarreran bigarren **su-itzalgailua** eta **lehen sorospenetako kutxa** daude.
-- **Wi-Fi sarbide-puntu** bat dago sabaian, tailerreko gailuentzat.
-- Tailerrean **debekatuta dago jatea eta edatea**, likido batek ekipo bat hondatu edo zirkuitulabur bat eragin dezakeelako.
+| Gunea | Sarbidea | Ekipoak (1. eta 2. ataletakoak) |
+|---|---|---|
+| **Harrera** | Publikoa | PC-Arreta (mahaigainekoa, 2 pantaila), `imp_a` multifuntzional kolorea, Wi-Fi AP, CCTV sarreran |
+| **Bulegoak** (Admin. eta logistika) | Mugatua (RFID) | 4 mahaigaineko PC (2 pantaila bakoitzak), `imp_m` multifuntzional A4/A3 |
+| **Ekipo-gela** | Murriztua: IT soilik (RFID + PIN, giltzapean) | Rack-a 19" 18U (router/firewall, switch 24p PoE+, patch panela, zerbitzari fisikoa, NAS, SAI 1500VA) eta IT saileko 2 eramangarriak |
+| **Tailerra** | Mugatua (langileak + IT, RFID) | 3 altxagailu, ECU diagnosi-gunea (PC_TAILERRA eramangarri babestua + OBD), `imp_t` laser monokromoa, Wi-Fi AP |
+
+### Kokapenaren arrazoiak
+
+- **Hiru altxagailuak** gure zerbitzuen arabera banatuta daude: motorra eta ECU, ihes-sistemak, eta karrozeria eta soinua. Ibilgailuak **ate sekzionaletik** sartzen dira zuzenean, harreratik pasatu gabe.
+- **ECU diagnosi-gunea** lehenengo altxagailuaren ondoan dago, OBD kablea autora iristeko. Bertan dago tailerreko ordenagailu babestua eta `imp_t` inprimagailua (lan-aginduak eta txostenak).
+- **Ekipo-gela** gune itxi bat da, bulegoen ondoan eta tailerreko hautsetik eta olioetatik urrun. *Segurtasuna* dokumentuko sarbide fisikoaren politika betetzen du: RFID txartela + PIN, giltzapean, su-itzalgailua (CO2) eta SAI.
+- **Koadro elektrikoa** ekipo-gelan dago, **arrisku elektrikoaren seinalearekin**, eta ondoan **CO2zko su-itzalgailua**, urak edo hautsak ekipo elektronikoak hondatzen dituztelako.
+- **Hondakinen gunea** tailerraren hondoan dago, larrialdi-irteeraren ondoan, edukiontziak kanpora ateratzeko harreratik pasatu gabe. Edukiontziak bereizita: **olio erabilia**, **bateriak**, **pneumatikoak**, **RAEE** (informatika) eta **hondakin arruntak**, isurketen aurkako erretiluarekin (ikus *Jasangarritasuna* eta 9. atala).
+- **Larrialdi-irteerak** bi daude: harrerako sarrera nagusia eta tailerreko alboko atea. Su-itzalgailuak harreran, tailerrean (bi) eta ekipo-gelan daude, eta **lehen sorospenetako kutxa** tailerrean.
+- Tailerrean **babes-ekipoa derrigorrezkoa** da, eta harreratik tailerrerako atean **"Langileak soilik"** seinalea dago.
 
 ---
 
