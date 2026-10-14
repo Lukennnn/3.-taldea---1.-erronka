@@ -2,17 +2,19 @@
 
 > **Enpresa:** TungTunning (tuning tailerra) · **Taldea:** 3. taldea
 > **Edukia:** WordPress (enpresaren web-ataria) eta GLPI (gertakari/txartel-sistema).
-> **Azpiegitura:** web-zerbitzaria `192.168.10.21` (`www.tuning.eus`), XAMPP/Apache + MySQL/MariaDB gainean.
+> **Azpiegitura:** XAMPP (Apache + MySQL/MariaDB), `localhost` web-zerbitzarian.
 > **Araua:** egin, dokumentatu eta justifikatu; dokumentazioak benetako konfigurazioarekin bat etorri behar du.
 
 ---
 
 ## 1. Sarrera
 
-TungTunning enpresak bi web-aplikazio ditu, biak web-zerbitzari berean (`192.168.10.21`, `www.tuning.eus`), XAMPP ingurunean (Apache + MySQL/MariaDB):
+TungTunning enpresak bi web-aplikazio ditu, biak web-zerbitzari berean, XAMPP ingurunean (Apache + MySQL/MariaDB):
 
-- **WordPress** — enpresaren web-ataria / barne-ataria (CMS).
-- **GLPI** — gertakarien eta txartelen (ticket) kudeaketa-sistema.
+| Aplikazioa | Funtzioa | URLa |
+|---|---|---|
+| **WordPress 7.1.3** | Enpresaren web-ataria (CMS) | `http://localhost/3taldea/` (admin: `/3taldea/wp-admin/`) |
+| **GLPI** | Gertakarien/txartelen eta inbentarioaren kudeaketa | `http://localhost/glpi/` |
 
 Datu-basea MySQL/MariaDB da (GLPIk `glpi_user` erabiltzailea du; ikus *Datu-baseak* dokumentua).
 
@@ -22,49 +24,97 @@ Datu-basea MySQL/MariaDB da (GLPIk `glpi_user` erabiltzailea du; ikus *Datu-base
 
 ### 2.1. Erabilera eta CMSaren funtzionalitateak
 
-WordPress CMSa aukeratu da enpresaren weba sortzeko. Dokumentatu behar da **webak izango duen erabileraren eta CMSaren funtzionalitateen arteko lotura**: adibidez, zerbitzuen aurkezpena, kontaktua, berriak/bloga, eta edukia modu errazean eguneratzeko aukera teknikaririk gabe.
+WordPress CMSa aukeratu da enpresaren weba sortzeko, edukia teknikaririk gabe eguneratu ahal izateko. Webaren erabileraren eta CMSaren funtzionalitateen arteko lotura:
+
+| Webaren beharra | WordPressen funtzionalitatea |
+|---|---|
+| Tailerraren aurkezpena eta zerbitzuak (ECU, karrozeria, ihes-sistemak, soinua) | **Orriak** (*Hasiera*, *Zerbitzuak*, *Guri buruz*) |
+| Berriak eta proiektuak argitaratzea | **Bloga / Sarrerak** (*Bloga* menua) |
+| Bezeroen eskaerak (aurrekontua) jasotzea | **Contact Form** inprimakia (*Kontaktua*) + **Flamingo** (mezuak gordetzeko) |
+| Proiektuaren dokumentazioa erakustea | *Dokumentazioa* menua (azpi-orriekin) |
+| Segurtasuna eta babeskopiak | **Limit Login Attempts** (saio-hasiera saiakerak mugatu) eta **UpdraftPlus** (babeskopiak) |
+| Migrazioa | **All-in-One WP Migration** |
 
 ### 2.2. Instalazioaren parametroak
 
-Dokumentatu beharreko instalazio-parametroak:
-- Web-zerbitzaria: Apache (XAMPP), `192.168.10.21` / `www.tuning.eus`.
-- Datu-basea: MySQL/MariaDB, datu-base propioa WordPressentzat.
-- Administrazio-URLa: `http://www.tuning.eus/wp-admin`.
+| Parametroa | Balioa |
+|---|---|
+| Web-zerbitzaria | Apache (XAMPP) |
+| Instalazio-karpeta | `C:\xampp\htdocs\3taldea` |
+| Web-helbidea | `http://localhost/3taldea/` |
+| Administrazio-URLa | `http://localhost/3taldea/wp-admin/` |
+| Datu-basea | MySQL/MariaDB (XAMPP), WordPressentzako datu-base propioa |
+| Bertsioa | WordPress 7.1.3 |
+| Gunearen izena | TungTunning — *Zure autoa, zure estiloa — Bilboko tuning tailerra* |
 
-<!-- Argazkia: WordPressen instalazioa / `wp-admin` panela, enpresaren domeinua barran. -->
-![](irudiak/wae-01-argazkia.png)
+<!-- Argazkia: WordPressen wp-admin panela (Escritorio), localhost/3taldea/wp-admin barran. -->
+![](irudiak/wae-01-wp-panela.png)
 
 
 ### 2.3. Erabiltzaileak eta pribilegioak
 
-Gutxienez **bi erabiltzaile** sortu behar dira, logikaz, eta bakoitzaren pribilegioak azaldu. Adibidez:
+Hiru erabiltzaile sortu dira, bakoitza rol desberdin batekin, saileko lanaren arabera (pribilegio minimoen printzipioa):
 
-| Erabiltzailea | Rola | Pribilegioak |
-|---------------|------|--------------|
-| admin (IT) | Administratzailea | Kontrol osoa (plugin, itxura, erabiltzaileak) |
-| editorea (Marketina) | Editorea | Edukia sortu eta argitaratu, baina ez konfiguraziorik aldatu |
+| Erabiltzailea | Izena | Rola | Pribilegioak |
+|---|---|---|---|
+| `admin` | Asier Larrañaga (IT) | **Administratzailea** | Kontrol osoa: pluginak, itxura, erabiltzaileak, ezarpenak |
+| `Enol_N` | Enol (Harrera) | **Editorea** | Edukia (orriak/sarrerak) sortu, editatu eta argitaratu, besteenak barne; ez du konfiguraziorik aldatzen |
+| `Luken_P` | Luken Pagaldai | **Egilea** (*Autor*) | Bere sarrerak soilik idatzi eta argitaratu |
 
-<!-- Argazkia: erabiltzaileen zerrenda, bakoitza bere rolarekin. -->
-![](irudiak/wae-02-argazkia.png)
+**Justifikazioa:** IT sailak bakarrik du administrazio-baimena; harrerak webeko edukia eguneratzen du (editorea) baina ezin ditu pluginak edo itxura aldatu; tailerreko langileak bere lanen berriak argitaratu ditzake (egilea), besteen edukia ukitu gabe.
+
+<!-- Argazkia: erabiltzaileen zerrenda, bakoitza bere rolarekin (Administrador, Editor, Autor). -->
+![](irudiak/wae-02-wp-erabiltzaileak.png)
 
 
 ### 2.4. Txantiloiak (plantillak)
 
-Oinarrizkoak ez diren **hainbat txantiloi** probatu behar dira, probak argazkiekin dokumentatuz. Ondoren, azken diseinua haietako batekin egin eta **aukeraketa justifikatu** (zergatik txantiloi hori: diseinua, erantzukortasuna, pertsonalizazio-aukerak...).
+Bi txantiloi probatu dira:
 
-<!-- Argazkia: probatutako txantiloiak (hainbat kaptura). -->
-![](irudiak/wae-03-argazkia.png)
+| Txantiloia | Ezaugarriak | Emaitza |
+|---|---|---|
+| **Twenty Twenty-Five** | WordPressen lehenetsitako bloke-txantiloia, blog estilokoa | Sinpleegia enpresa-web baterako |
+| **Astra** ✅ | Arina, erantzukorra (*responsive*), pertsonalizagarria (goiburua, koloreak, tipografia), Elementor/Gutenbergekin bateragarria | **Aukeratua** |
 
-<!-- Argazkia: hautatutako azken txantiloia aplikatuta. -->
-![](irudiak/wae-04-argazkia.png)
+**Aukeraketaren justifikazioa:** Astra aukeratu da azkarra eta erantzukorra delako (mugikorrean ondo ikusten da), goiburua eta menua pertsonalizatzeko aukera asko dituelako eta CSS gehigarriarekin erraz egokitzen delako tuning-tailer baten irudira (ilun + laranja).
+
+<!-- Argazkia: instalatutako txantiloiak (Astra aktibo, Twenty Twenty-Five probatua). -->
+![](irudiak/wae-03-wp-txantiloiak.png)
+
+<!-- Argazkia: hautatutako azken txantiloia (Astra) aplikatuta, webaren hasiera-orria. -->
+![](irudiak/wae-04-wp-astra-weba.png)
 
 
 ### 2.5. Diseinua eta CSS pertsonalizazioa
 
-Diseinu logikoa eta pertsonalizatua egin behar da, **txantiloiaren CSSan aldaketak** eginez (koloreak, tipografia, logoa...). Dokumentatu diseinua, zergatia eta egindako CSS aldaketak.
+Diseinua tuning-tailer baten irudiarekin bat egiteko pentsatu da: **atzealde iluna** (`#0f0f0f`) eta **laranja** (`#FF4500`) kolore nagusi gisa, logo propioa (*TUNGTUNNING*) eta menu argia (*Hasiera, Zerbitzuak, Guri buruz, Dokumentazioa, Bloga, Kontaktua*).
 
-<!-- Argazkia: CSS aldaketak (kodea) eta emaitza bisuala (aurretik/ondoren). -->
-![](irudiak/wae-05-argazkia.png)
+Aldaketak **Itxura › Pertsonalizatu › CSS gehigarria** atalean egin dira. Adibidez:
+
+```css
+/* ===== TungTunning - CSS adicional (3. taldea) ===== */
+
+/* 1. Atzealde iluna osorako */
+body, #page, .site-header, header#masthead, .main-header-bar, .ast-primary-header-bar {
+    background-color: #0f0f0f !important;
+}
+
+.ast-theme-transparent-header .main-header-bar,
+.ast-theme-transparent-header #masthead {
+    position: relative !important;
+    background-color: #0f0f0f !important;
+}
+
+/* Lerro laranja goiburuaren azpian */
+.ast-primary-header-bar {
+    border-bottom: 2px solid #FF4500 !important;
+}
+```
+
+**Zergatia:** kolore ilunak eta laranjak autoen/tuningaren mundua islatzen dute eta kontraste handia ematen dute (irakurgarritasuna); `!important` erabili da Astraren lehenetsitako estiloak gainidazteko.
+
+<!-- Argazkia: CSS gehigarria (kodea) eta emaitza bisuala pertsonalizatzailean. -->
+![](irudiak/wae-05-wp-css.png)
 
 
 ---
@@ -73,50 +123,78 @@ Diseinu logikoa eta pertsonalizatua egin behar da, **txantiloiaren CSSan aldaket
 
 ### 3.1. Instalazioaren parametroak
 
-GLPI web-zerbitzari berean instalatu da (Apache + MySQL/MariaDB). Datu-basean `glpi_user` erabiltzailea erabiltzen du. Dokumentatu: instalazio-URLa (`http://www.tuning.eus/glpi`), datu-basearen konexio-parametroak eta instalazio-pausoak.
+| Parametroa | Balioa |
+|---|---|
+| Web-zerbitzaria | Apache (XAMPP), WordPressen zerbitzari berean |
+| Instalazio-karpeta | `C:\xampp\htdocs\glpi` |
+| URLa | `http://localhost/glpi/` |
+| Datu-basea | MySQL/MariaDB, `glpi_user` erabiltzailearekin |
+| Saio-hasiera | Super-Admin profila, erro-entitatea |
 
-<!-- Argazkia: GLPIren instalazioa / hasierako panela. -->
-![](irudiak/wae-06-argazkia.png)
+GLPIk berak segurtasun-oharrak erakusten ditu panelean (lehenetsitako erabiltzaileen pasahitzak aldatzea, `install/install.php` ezabatzea, `session.cookie_httponly` aktibatzea); hurrengo urratsetan konpondu beharrekoak dira.
+
+<!-- Argazkia: GLPIren hasierako panela (3 ordenagailu erregistratuta). -->
+![](irudiak/wae-06-glpi-panela.png)
 
 
 ### 3.2. Erabiltzaileak eta rolak
 
-Hainbat erabiltzaile sortu behar dira, **gutxienez bi rol desberdinekin** (adib. `super-admin` IT sailarentzat eta `technician`/`self-service` beste sailentzat).
+Taldeko kideentzat erabiltzaileak sortu dira: **Asier** (Larrañaga), **Enol** (Naveran) eta **Luken** (Pagaldai). Horiez gain, GLPIren lehenetsitako erabiltzaileak daude (`glpi`, `tech`, `normal`, `post-only`, `glpi-system`).
 
-<!-- Argazkia: erabiltzaileak beren rolekin. -->
-![](irudiak/wae-07-argazkia.png)
+GLPIk profil hauek ditu, eta erabiltzaile bakoitzari bere lanaren araberakoa esleitzen zaio:
+
+| Profila | Erabilera TungTunningen |
+|---|---|
+| **Super-Admin** | IT saila — kontrol osoa (konfigurazioa, erabiltzaileak, inbentarioa) |
+| **Technician** | Teknikariak — txartelak kudeatu eta konpondu |
+| **Self-Service** (lehenetsia) | Beste sailak — txartelak ireki eta jarraitu soilik |
+| Admin, Supervisor, Hotliner, Observer, Read-Only | Beste profil erabilgarriak |
+
+<!-- Argazkia: GLPIko erabiltzaileak. -->
+![](irudiak/wae-07-glpi-erabiltzaileak.png)
+
+<!-- Argazkia: GLPIko profilak (rolak). -->
+![](irudiak/wae-07b-glpi-profilak.png)
 
 
 ### 3.3. Enpresako ekipoak erregistratuta
 
-Enpresako ekipoak GLPIn erregistratu behar dira (inbentarioa): ordenagailuak, inprimagailuak, sareko gailuak... TungTunningeko ekipamendua (ikus *Hardwarea* dokumentua) kargatu daiteke.
+Enpresako ekipoak GLPIko inbentarioan erregistratu dira (*Activos › Ordenadores*), saileko kokapenarekin:
+
+| Izena | Mota | Kokapena |
+|---|---|---|
+| `PC_IT` | Eramangarria | IT |
+| `PC_TAILERRA` | Eramangarria | TAILERRA |
+| `PC-Arreta` | Mahaigainekoa (*Dorrea*) | ARRETA |
 
 <!-- Argazkia: erregistratutako ekipoen inbentarioa. -->
-![](irudiak/wae-08-argazkia.png)
+![](irudiak/wae-08-glpi-ekipoak.png)
 
 
 ### 3.4. Txartelak (tickets)
 
-Gertakari batzuk (tickets) sortu behar dira, sistemaren funtzionamendua erakusteko: adibidez, erabiltzaile batek arazo bat jakinarazten du eta IT sailak kudeatzen du.
+Txartel bat sortu da sistemaren funtzionamendua erakusteko: erabiltzaile batek arazo bat jakinarazten du eta IT sailak kudeatzen du.
 
-<!-- Argazkia: sortutako txartelak eta haien egoera/esleipena. -->
-![](irudiak/wae-09-argazkia.png)
+| ID | Izenburua | Egoera | Lehentasuna | Eskatzailea | Irekiera-data |
+|---|---|---|---|---|---|
+| 1 | ORDENAGAILUA EZ DA PIZTEN | Berria | Altua | Naveran Enol | 2026-10-05 10:53 |
+
+<!-- Argazkia: sortutako txartela eta haren egoera. -->
+![](irudiak/wae-09-glpi-txartelak.png)
 
 
 ---
 
 ## 4. Laburpena — egin beharrekoa / egindakoa
 
-- [ ] WordPress: erabilera↔CMS lotura dokumentatua
-- [ ] WordPress: 2+ erabiltzaile rolekin
-- [ ] WordPress: txantiloi-probak + azken aukeraketa justifikatua
-- [ ] WordPress: CSS pertsonalizazioa dokumentatua
-- [ ] GLPI: instalazio-parametroak
-- [ ] GLPI: 2+ rol
-- [ ] GLPI: ekipoak erregistratuta
-- [ ] GLPI: txartelak sortuta
-
-> **Oharra:** atal hau benetako konfigurazioarekin osatu behar da. Argazkiak hartu zure WordPress eta GLPI instalazioetatik eta txertatu adierazitako lekuetan (`irudiak/wae/` karpetan).
+- [x] WordPress: erabilera↔CMS lotura dokumentatua
+- [x] WordPress: 2+ erabiltzaile rolekin (Administratzailea, Editorea, Egilea)
+- [x] WordPress: txantiloi-probak (Twenty Twenty-Five, Astra) + azken aukeraketa justifikatua
+- [x] WordPress: CSS pertsonalizazioa dokumentatua
+- [x] GLPI: instalazio-parametroak
+- [x] GLPI: 2+ rol (profilak)
+- [x] GLPI: ekipoak erregistratuta (3 ordenagailu)
+- [x] GLPI: txartelak sortuta
 
 ---
 

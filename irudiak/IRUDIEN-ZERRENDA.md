@@ -66,15 +66,16 @@
 | `seg-08-argazkia.png` | segurtasuna | Argazkia — VPNaren konfigurazioa pfSensen eta konexio-froga. (FALTA) |
 | `hw-01-argazkia.png` | hardware | Argazkia — tailerreko hondakin-edukiontziak (RAEE, metal, plastiko) eta erabilitako gestorearen izena. (FALTA) |
 | `hw-02-planoa.png` | hardware | Planoa — marrazketa-tresna batekin sortu (draw.io, Visio...) eta hemen txertatu. Elementuak, edukiontziak eta seinaleak argi adierazi. (FALTA) |
-| `wae-01-argazkia.png` | wae | Argazkia — WordPressen instalazioa / `wp-admin` panela, enpresaren domeinua barran. (FALTA) |
-| `wae-02-argazkia.png` | wae | Argazkia — erabiltzaileen zerrenda, bakoitza bere rolarekin. (FALTA) |
-| `wae-03-argazkia.png` | wae | Argazkia — probatutako txantiloiak (hainbat kaptura). (FALTA) |
-| `wae-04-argazkia.png` | wae | Argazkia — hautatutako azken txantiloia aplikatuta. (FALTA) |
-| `wae-05-argazkia.png` | wae | Argazkia — CSS aldaketak (kodea) eta emaitza bisuala (aurretik/ondoren). (FALTA) |
-| `wae-06-argazkia.png` | wae | Argazkia — GLPIren instalazioa / hasierako panela. (FALTA) |
-| `wae-07-argazkia.png` | wae | Argazkia — erabiltzaileak beren rolekin. (FALTA) |
-| `wae-08-argazkia.png` | wae | Argazkia — erregistratutako ekipoen inbentarioa. (FALTA) |
-| `wae-09-argazkia.png` | wae | Argazkia — sortutako txartelak eta haien egoera/esleipena. (FALTA) |
+| `wae-01-wp-panela.png` | wae | JADA SARTUTA |
+| `wae-02-wp-erabiltzaileak.png` | wae | JADA SARTUTA |
+| `wae-03-wp-txantiloiak.png` | wae | JADA SARTUTA |
+| `wae-04-wp-astra-weba.png` | wae | JADA SARTUTA |
+| `wae-05-wp-css.png` | wae | JADA SARTUTA |
+| `wae-06-glpi-panela.png` | wae | JADA SARTUTA |
+| `wae-07-glpi-erabiltzaileak.png` | wae | JADA SARTUTA |
+| `wae-07b-glpi-profilak.png` | wae | JADA SARTUTA |
+| `wae-08-glpi-ekipoak.png` | wae | JADA SARTUTA |
+| `wae-09-glpi-txartelak.png` | wae | JADA SARTUTA |
 | `db-04-mysql-xampp-karpeta.png` | datu-baseak | JADA SARTUTA |
 | `db-05-mysql-portua.png` | datu-baseak | JADA SARTUTA |
 | `db-08-mongodb-portua-interfazea.png` | datu-baseak | JADA SARTUTA |
