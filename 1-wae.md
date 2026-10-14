@@ -216,48 +216,7 @@ Txartel bat sortu da sistemaren funtzionamendua erakusteko: erabiltzaile batek a
 
 ---
 
-## 5. Plangintza
-
-Erronkaren zereginak ikasgaika eta bakoitzaren egoera (✅ eginda · ⏳ egiteko · ➖ ez egitea erabakita).
-
-| Ikasgaia | Zeregina | Egoera |
-|---|---|:---:|
-| **SEA** | `3taldea.lan` domeinua eta domeinu-kontrolatzailea | ✅ |
-| | OUak, taldeak eta erabiltzaileak | ✅ |
-| | Karpeta partekatuak NTFS baimenekin | ✅ |
-| | GPOak (pantaila-atzealdea, CMD, kontrol-panela) | ✅ |
-| | Bezeroak domeinuan sartu | ✅ |
-| | Prozesuen eta zerbitzuen kudeaketa | ✅ |
-| | Inprimaketa: Windows, CUPS eta gurutzatua | ✅ |
-| | Bigarren erabiltzailea sail bakoitzean (aukerakoa) | ⏳ |
-| **SZI** | DNS: eremu zuzenak, alderantzizkoa eta PTRak | ✅ |
-| | DHCP: tartea, esklusioa, erreserba eta aukerak | ✅ |
-| | Jitsi Meet martxan, bi erabiltzaileekin frogatua | ✅ |
-| | Jitsi autentifikazioa / parametro aurreratuak | ➖ |
-| **SB** | Sistema banatuaren beharra justifikatu | ✅ |
-| | Birtualizazio-tresna eta makinak dokumentatu | ✅ |
-| | Zerbitzua VM independentean (Jitsi) | ✅ |
-| | Zerbitzua edukiontzian (Docker) | ⏳ |
-| | Erabilgarritasun-neurriak (backup, SAI, snapshot) | ✅ |
-| **WAE** | WordPress: rolak, txantiloiak eta CSS | ✅ |
-| | GLPI: profilak, ekipoak eta txartelak | ✅ |
-| | GitHub biltegia eta GitHub Pages | ✅ |
-| **Datu-baseak** | Datuen analisia eta bi DBKS (MySQL/MariaDB + MongoDB) | ✅ |
-| | Instalazioa, erabiltzaileak eta baimenen froga | ✅ |
-| **Segurtasuna** | Sarearen diseinua eta pfSense suebakia | ✅ |
-| | HTTPS, sarbide fisikoa eta pasahitz-politika | ✅ |
-| | Kontingentzia-plana eta backup-politika | ✅ |
-| | DMZ zehaztu | ⏳ |
-| | IDS (Snort/Suricata) eta VPN | ⏳ |
-| | Aktiboen azterketa (PILAR/INCIBE) | ⏳ |
-| | Kapturak igo (8) | ⏳ |
-| **Hardwarea** | Aurrekontua, osagaiak, tresnak eta birziklatzea | ✅ |
-| | Tailerraren planoa eta kapturak igo (2) | ⏳ |
-| **Jasangarritasuna** | ESG plana | ✅ |
-
----
-
-## 6. Laburpena — egin beharrekoa / egindakoa
+## 5. Laburpena — egin beharrekoa / egindakoa
 
 - [x] WordPress: erabilera↔CMS lotura dokumentatua
 - [x] WordPress: 2+ erabiltzaile rolekin (Administratzailea, Editorea, Egilea)
@@ -268,7 +227,6 @@ Erronkaren zereginak ikasgaika eta bakoitzaren egoera (✅ eginda · ⏳ egiteko
 - [x] GLPI: ekipoak erregistratuta (3 ordenagailu)
 - [x] GLPI: txartelak sortuta
 - [x] GitHub biltegia eta GitHub Pages dokumentatuta
-- [x] Plangintza (zereginak eta egoera)
 
 ---
 
