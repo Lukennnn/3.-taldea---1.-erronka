@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'eu' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title and page.url != '/' %}{{ page.title }} · {% endif %}{{ site.title }} — Dokumentazioa</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/tungtunning.css' | relative_url }}">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230f0f0f'/><text x='16' y='22' font-family='Arial' font-weight='900' font-size='15' text-anchor='middle' fill='%23FF4500'>TT</text></svg>">
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="brand-row">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <span class="brand-mark">TT</span>
+        <span class="brand-text">
+          <span class="brand-name">TUNG<b>TUNNING</b></span>
+          <span class="brand-sub">3. taldea · 1. Erronka</span>
+        </span>
+      </a>
+      <button class="menu-btn" id="menu-btn" aria-label="Menua" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="nav" id="nav">
+      <p class="nav-label">Dokumentazioa</p>
+      {% for item in site.nav %}
+        {% assign item_url = item.url | relative_url %}
+        {% assign this_url = page.url | relative_url %}
+        <a class="nav-item{% if item_url == this_url %} active{% endif %}" href="{{ item_url }}">
+          <span class="nav-code">{{ item.code }}</span>
+          <span class="nav-text">
+            <span class="nav-title">{{ item.title }}</span>
+            <span class="nav-desc">{{ item.desc }}</span>
+          </span>
+        </a>
+      {% endfor %}
+    </nav>
+
+    <div class="sidebar-foot">
+      <a href="https://github.com/lukennnn/3.-taldea---1.-erronka" target="_blank" rel="noopener">GitHub biltegia ↗</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="page{% if page.url == '/' %} page-home{% endif %}">
+      {% if page.url != '/' %}
+        {% for item in site.nav %}
+          {% if item.url == page.url %}
+            <div class="crumb"><a href="{{ '/' | relative_url }}">TungTunning</a><span>/</span><span class="crumb-code">{{ item.code }}</span>{{ item.title }}</div>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+
+      <article class="content">
+        {{ content }}
+      </article>
+
+      {% if page.url != '/' %}
+        {% for item in site.nav %}
+          {% if item.url == page.url %}
+            {% assign i = forloop.index0 %}
+            {% assign prev_i = i | minus: 1 %}
+            {% assign next_i = i | plus: 1 %}
+            <nav class="pager">
+              {% if prev_i >= 0 %}{% assign p = site.nav[prev_i] %}
+                <a class="pager-link prev" href="{{ p.url | relative_url }}"><small>← Aurrekoa</small>{{ p.title }}</a>
+              {% else %}<span></span>{% endif %}
+              {% if next_i < site.nav.size %}{% assign n = site.nav[next_i] %}
+                <a class="pager-link next" href="{{ n.url | relative_url }}"><small>Hurrengoa →</small>{{ n.title }}</a>
+              {% endif %}
+            </nav>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+
+      <footer class="footer">TungTunning · 3. taldea · Bilboko tuning tailerra</footer>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('menu-btn');
+      var bar = document.getElementById('sidebar');
+      btn.addEventListener('click', function () {
+        var open = bar.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open);
+      });
+    })();
+  </script>
+</body>
+</html>
