@@ -19,7 +19,7 @@
 Argazki guztiak `irudiak/` karpeta bakarrean daude, eta Markdowneko estekak erlatiboak dira, beraz GitHubera igotzean automatikoki agertzen dira.
 
 - Sistema Eragileak, Sare Zerbitzuak eta Datu-baseak: argazkiak **jada sartuta**.
-- Falta direnak (Segurtasuna, Hardwarea, WAE eta Sistema Banatuak-eko `docker`): gorde zure kaptura `irudiak/` karpetan esteka-izen zehatzarekin, eta bakarrik agertuko da. Zein fitxategik zer behar duen jakiteko, ikus [`irudiak/_IRUDIEN-ZERRENDA.md`](irudiak/_IRUDIEN-ZERRENDA.md).
+- Falta direnak (Segurtasuna, Hardwarea, WAE eta Sistema Banatuak-eko `docker`): gorde zure kaptura `irudiak/` karpetan esteka-izen zehatzarekin, eta bakarrik agertuko da. Zein fitxategik zer behar duen jakiteko, ikus [`irudiak/IRUDIEN-ZERRENDA.md`](irudiak/IRUDIEN-ZERRENDA.md).
 
 ---
 
