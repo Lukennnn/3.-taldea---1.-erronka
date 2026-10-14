@@ -1,144 +1,210 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 720" width="1100" height="720" font-family="Segoe UI, Helvetica, Arial, sans-serif">
-  <rect width="1100" height="720" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 780" width="1200" height="780" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0 L0 0 0 20" fill="none" stroke="#1c1c1c" stroke-width="1"/>
+    </pattern>
+    <symbol id="pc" viewBox="0 0 20 18"><rect x="1" y="1" width="18" height="11" rx="1.5" fill="#0f0f0f" stroke="#ff4500" stroke-width="1.5"/><rect x="8" y="12" width="4" height="3" fill="#ff4500"/><rect x="5" y="15" width="10" height="2" fill="#ff4500"/></symbol>
+    <symbol id="prn" viewBox="0 0 20 18"><rect x="5" y="1" width="10" height="6" fill="#f2f2f2"/><rect x="1" y="6" width="18" height="9" rx="2" fill="#3a3a3a" stroke="#cfcfcf" stroke-width="1.2"/><rect x="5" y="12" width="10" height="5" fill="#f2f2f2"/></symbol>
+    <symbol id="car" viewBox="0 0 80 150"><rect x="4" y="2" width="72" height="146" rx="22" fill="#2a2a2a" stroke="#9a9a9a" stroke-width="2"/><rect x="14" y="34" width="52" height="24" rx="6" fill="#4b5563"/><rect x="14" y="100" width="52" height="18" rx="5" fill="#4b5563"/><rect x="0" y="22" width="6" height="22" rx="2" fill="#111"/><rect x="74" y="22" width="6" height="22" rx="2" fill="#111"/><rect x="0" y="106" width="6" height="22" rx="2" fill="#111"/><rect x="74" y="106" width="6" height="22" rx="2" fill="#111"/></symbol>
+  </defs>
+
+  <rect width="1200" height="780" fill="#0d0d0d"/>
+  <rect width="1200" height="780" fill="url(#grid)"/>
 
   <!-- Izenburua -->
-  <text x="40" y="44" font-size="22" font-weight="700" fill="#0f0f0f">TungTunning · Informatika tailerraren planoa</text>
-  <rect x="40" y="54" width="70" height="3" fill="#ff4500"/>
+  <text x="40" y="46" font-size="24"><tspan font-weight="800" fill="#ff4500" letter-spacing="1">TUNGTUNNING</tspan><tspan font-weight="300" fill="#f2f2f2"> · Tailerraren planoa</tspan></text>
+  <text x="40" y="68" font-size="12" fill="#8a8a8a">Bilboko tuning tailerra · Guneak, sarbide-mailak, ekipoak, hondakinak eta segurtasun-seinaleak</text>
 
-  <!-- Gelaren zorua -->
-  <rect x="40" y="80" width="720" height="570" fill="#fafaf8"/>
-
-  <!-- Ekipo-gela (IT soilik) -->
-  <rect x="520" y="80" width="240" height="220" fill="#f1ecf7"/>
+  <!-- Eraikina -->
+  <rect x="40" y="100" width="860" height="630" fill="#161616"/>
+  <!-- Guneen koloreak -->
+  <rect x="40" y="100" width="260" height="230" fill="#3b82f6" fill-opacity=".10"/>
+  <rect x="40" y="330" width="260" height="200" fill="#22c55e" fill-opacity=".08"/>
+  <rect x="40" y="530" width="260" height="200" fill="#a855f7" fill-opacity=".13"/>
+  <rect x="300" y="100" width="600" height="630" fill="#ff4500" fill-opacity=".04"/>
 
   <!-- Hormak -->
-  <rect x="40" y="80" width="720" height="570" fill="none" stroke="#222" stroke-width="6"/>
-  <line x1="520" y1="80" x2="520" y2="300" stroke="#222" stroke-width="4"/>
-  <line x1="520" y1="300" x2="760" y2="300" stroke="#222" stroke-width="4"/>
-  <!-- Hutsuneak (ateak) -->
-  <rect x="300" y="645" width="70" height="10" fill="#ffffff"/>
-  <rect x="35" y="520" width="10" height="55" fill="#ffffff"/>
-  <rect x="540" y="297" width="50" height="6" fill="#fafaf8"/>
+  <g stroke="#e6e6e6" fill="none">
+    <rect x="40" y="100" width="860" height="630" stroke-width="5"/>
+    <line x1="300" y1="100" x2="300" y2="730" stroke-width="3.5"/>
+    <line x1="40" y1="330" x2="300" y2="330" stroke-width="3.5"/>
+    <line x1="40" y1="530" x2="300" y2="530" stroke-width="3.5"/>
+  </g>
+  <!-- Ateen hutsuneak -->
+  <rect x="36" y="175" width="9" height="60" fill="#0d0d0d"/>
+  <rect x="330" y="95" width="530" height="10" fill="#0d0d0d"/>
+  <rect x="895" y="630" width="10" height="50" fill="#0d0d0d"/>
+  <rect x="297" y="250" width="7" height="45" fill="#161616"/>
+  <rect x="297" y="440" width="7" height="45" fill="#161616"/>
+  <rect x="215" y="327" width="45" height="7" fill="#161616"/>
+  <rect x="215" y="527" width="45" height="7" fill="#161616"/>
 
   <!-- Ateak -->
-  <g fill="none" stroke="#222" stroke-width="1.5">
-    <line x1="300" y1="650" x2="300" y2="600"/>
-    <path d="M300,600 A50,50 0 0,1 350,650"/>
-    <line x1="40" y1="520" x2="90" y2="520"/>
-    <path d="M90,520 A50,50 0 0,1 40,570"/>
-    <line x1="540" y1="300" x2="540" y2="345"/>
-    <path d="M540,345 A45,45 0 0,0 585,300"/>
+  <g fill="none" stroke="#bdbdbd" stroke-width="1.4">
+    <path d="M40,175 L85,175 M85,175 A45,45 0 0,1 40,220"/>
+    <path d="M300,250 L345,250 M345,250 A45,45 0 0,1 300,295"/>
+    <path d="M300,440 L345,440 M345,440 A45,45 0 0,1 300,485"/>
+    <path d="M215,330 L215,370 M215,370 A42,42 0 0,0 257,330"/>
+    <path d="M215,530 L215,570 M215,570 A42,42 0 0,0 257,530"/>
+    <path d="M900,630 L855,630 M855,630 A45,45 0 0,0 900,675"/>
   </g>
-  <text x="335" y="676" text-anchor="middle" font-size="13" fill="#333">Sarrera</text>
+  <!-- Ate sekzionala (ibilgailuak) -->
+  <line x1="330" y1="100" x2="860" y2="100" stroke="#ff4500" stroke-width="4" stroke-dasharray="14 7"/>
+  <text x="595" y="90" text-anchor="middle" font-size="11" font-weight="700" fill="#ff4500">▼ ATE SEKZIONALA · ibilgailuen sarrera ▼</text>
+  <text x="26" y="205" text-anchor="middle" font-size="10" font-weight="700" fill="#60a5fa" transform="rotate(-90 26 205)">Bezeroen sarrera</text>
+  <path d="M48,205 L72,205" stroke="#60a5fa" stroke-width="2.5"/><polygon points="72,199 82,205 72,211" fill="#60a5fa"/>
 
-  <!-- Ekipo-gela: rack-a -->
-  <text x="640" y="100" text-anchor="middle" font-size="11" font-weight="700" fill="#5d4a6e">Rack 19" 18U</text>
-  <g font-size="10" text-anchor="middle">
-    <rect x="580" y="106" width="120" height="168" rx="4" fill="#2b2b2b"/>
-    <rect x="586" y="112" width="108" height="22" rx="2" fill="#ff4500"/><text x="640" y="127" fill="#fff" font-weight="700">Router / Firewall</text>
-    <rect x="586" y="138" width="108" height="22" rx="2" fill="#4a4a4a"/><text x="640" y="153" fill="#fff">Switch 24p PoE+</text>
-    <rect x="586" y="164" width="108" height="22" rx="2" fill="#4a4a4a"/><text x="640" y="179" fill="#fff">Patch panel 24p</text>
-    <rect x="586" y="190" width="108" height="22" rx="2" fill="#6b5a7d"/><text x="640" y="205" fill="#fff">Zerbitzari fisikoa</text>
-    <rect x="586" y="216" width="108" height="22" rx="2" fill="#6b5a7d"/><text x="640" y="231" fill="#fff">NAS (babeskopiak)</text>
-    <rect x="586" y="242" width="108" height="26" rx="2" fill="#3a6b45"/><text x="640" y="259" fill="#fff">SAI 1500VA</text>
+  <!-- ===== HARRERA ===== -->
+  <text x="56" y="126" font-size="14" font-weight="800" fill="#f2f2f2">HARRERA</text>
+  <text x="56" y="142" font-size="10" fill="#9ca3af">Bezeroari arreta</text>
+  <rect x="200" y="114" width="80" height="18" rx="9" fill="#16a34a"/><text x="240" y="127" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">Publikoa</text>
+  <rect x="110" y="205" width="150" height="22" rx="4" fill="#2b3442" stroke="#60a5fa" stroke-width="1.2"/>
+  <text x="185" y="220" text-anchor="middle" font-size="10" fill="#cfe0ff">Mostradorea</text>
+  <use xlink:href="#pc" href="#pc" x="140" y="178" width="22" height="20"/><text x="152" y="174" text-anchor="middle" font-size="9" fill="#cfcfcf">PC-Arreta</text>
+  <use xlink:href="#prn" href="#prn" x="215" y="178" width="22" height="20"/><text x="226" y="174" text-anchor="middle" font-size="9" fill="#cfcfcf">imp_a</text>
+  <rect x="60" y="282" width="120" height="30" rx="8" fill="#26303d" stroke="#4b5b70"/>
+  <text x="120" y="301" text-anchor="middle" font-size="10" fill="#cfe0ff">Itxarongela</text>
+  <circle cx="250" cy="290" r="11" fill="none" stroke="#60a5fa" stroke-width="1.5"/><text x="250" y="294" text-anchor="middle" font-size="8" font-weight="700" fill="#60a5fa">AP</text>
+
+  <!-- ===== BULEGOAK ===== -->
+  <text x="56" y="356" font-size="14" font-weight="800" fill="#f2f2f2">BULEGOAK</text>
+  <text x="56" y="372" font-size="10" fill="#9ca3af">Administrazioa eta logistika</text>
+  <rect x="200" y="344" width="80" height="18" rx="9" fill="#d97706"/><text x="240" y="357" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">Mugatua</text>
+  <rect x="62" y="405" width="90" height="42" rx="4" fill="#22302a" stroke="#4ade80" stroke-width="1.2"/>
+  <use xlink:href="#pc" href="#pc" x="96" y="412" width="22" height="20"/><text x="107" y="460" text-anchor="middle" font-size="9" fill="#cfcfcf">Administrazioa</text>
+  <rect x="170" y="405" width="90" height="42" rx="4" fill="#22302a" stroke="#4ade80" stroke-width="1.2"/>
+  <use xlink:href="#pc" href="#pc" x="204" y="412" width="22" height="20"/><text x="215" y="460" text-anchor="middle" font-size="9" fill="#cfcfcf">Logistika</text>
+  <use xlink:href="#prn" href="#prn" x="66" y="480" width="22" height="20"/><text x="95" y="494" font-size="9" fill="#cfcfcf">imp_m</text>
+
+  <!-- ===== EKIPO-GELA ===== -->
+  <text x="56" y="556" font-size="14" font-weight="800" fill="#f2f2f2">EKIPO-GELA</text>
+  <text x="56" y="572" font-size="10" fill="#9ca3af">Zerbitzariak eta sarea</text>
+  <rect x="200" y="544" width="80" height="18" rx="9" fill="#dc2626"/><text x="240" y="557" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">IT soilik</text>
+  <g font-size="8.5" text-anchor="middle" fill="#fff">
+    <rect x="62" y="590" width="92" height="124" rx="4" fill="#0a0a0a" stroke="#a855f7" stroke-width="1.5"/>
+    <rect x="68" y="596" width="80" height="18" rx="2" fill="#ff4500"/><text x="108" y="608" font-weight="700">pfSense</text>
+    <rect x="68" y="617" width="80" height="18" rx="2" fill="#3f3f46"/><text x="108" y="629">Switch 24p</text>
+    <rect x="68" y="638" width="80" height="18" rx="2" fill="#6b21a8"/><text x="108" y="650">Zerbitzaria</text>
+    <rect x="68" y="659" width="80" height="18" rx="2" fill="#6b21a8"/><text x="108" y="671">NAS</text>
+    <rect x="68" y="680" width="80" height="28" rx="2" fill="#166534"/><text x="108" y="697">SAI 1500VA</text>
   </g>
-  <!-- Koadro elektrikoa -->
-  <rect x="716" y="112" width="30" height="80" fill="#fdecea" stroke="#c0392b" stroke-width="1.5"/>
-  <text x="731" y="155" text-anchor="middle" font-size="9" fill="#c0392b" transform="rotate(-90 731 155)">Koadro elek.</text>
-  <polygon points="731,200 745,224 717,224" fill="#ffcc00" stroke="#333" stroke-width="1"/>
-  <text x="731" y="221" text-anchor="middle" font-size="12" font-weight="700" fill="#333">!</text>
-  <rect x="718" y="234" width="26" height="20" rx="3" fill="#c0392b"/><text x="731" y="248" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">SU</text>
-  <text x="528" y="100" font-size="11" font-weight="700" fill="#5d4a6e">Ekipo-gela</text>
-  <!-- Sarbide mugatua -->
-  <g transform="translate(602,312)">
-    <rect x="0" y="6" width="14" height="11" rx="2" fill="#5d4a6e"/>
-    <path d="M3,6 V3 A4,4 0 0,1 11,3 V6" fill="none" stroke="#5d4a6e" stroke-width="2"/>
-    <text x="20" y="16" font-size="10" fill="#5d4a6e">IT soilik (txartela)</text>
+  <text x="108" y="726" text-anchor="middle" font-size="9" fill="#c4b5fd">Rack 19"</text>
+  <rect x="172" y="595" width="80" height="38" rx="4" fill="#2a2235" stroke="#a855f7" stroke-width="1.2"/>
+  <use xlink:href="#pc" href="#pc" x="201" y="601" width="22" height="20"/><text x="212" y="646" text-anchor="middle" font-size="9" fill="#cfcfcf">PC_IT</text>
+  <rect x="270" y="650" width="22" height="62" fill="#3a1414" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="281" y="681" text-anchor="middle" font-size="8" fill="#fca5a5" transform="rotate(-90 281 681)">Koadro elek.</text>
+  <polygon points="240,662 256,690 224,690" fill="#facc15" stroke="#111"/><text x="240" y="687" text-anchor="middle" font-size="13" font-weight="800" fill="#111">!</text>
+  <rect x="226" y="698" width="28" height="20" rx="3" fill="#dc2626"/><text x="240" y="712" text-anchor="middle" font-size="9" font-weight="800" fill="#fff">CO2</text>
+  <g transform="translate(262,566)"><rect x="0" y="6" width="13" height="10" rx="2" fill="#c4b5fd"/><path d="M3,6 V3 A3.5,3.5 0 0,1 10,3 V6" fill="none" stroke="#c4b5fd" stroke-width="2"/></g>
+
+  <!-- ===== TAILERRA ===== -->
+  <text x="316" y="128" font-size="14" font-weight="800" fill="#f2f2f2">TAILERRA</text>
+  <rect x="396" y="116" width="110" height="18" rx="9" fill="#d97706"/><text x="451" y="129" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">Langileak + IT</text>
+
+  <!-- Altxagailuak -->
+  <g fill="none" stroke="#ff4500" stroke-width="1.5" stroke-dasharray="8 5">
+    <rect x="330" y="145" width="160" height="190" rx="3"/>
+    <rect x="510" y="145" width="160" height="190" rx="3"/>
+    <rect x="690" y="145" width="160" height="190" rx="3"/>
+  </g>
+  <g fill="#ff4500">
+    <rect x="336" y="152" width="10" height="10"/><rect x="474" y="152" width="10" height="10"/><rect x="336" y="318" width="10" height="10"/><rect x="474" y="318" width="10" height="10"/>
+    <rect x="516" y="152" width="10" height="10"/><rect x="654" y="152" width="10" height="10"/><rect x="516" y="318" width="10" height="10"/><rect x="654" y="318" width="10" height="10"/>
+    <rect x="696" y="152" width="10" height="10"/><rect x="834" y="152" width="10" height="10"/><rect x="696" y="318" width="10" height="10"/><rect x="834" y="318" width="10" height="10"/>
+  </g>
+  <use xlink:href="#car" href="#car" x="370" y="165" width="80" height="150"/>
+  <use xlink:href="#car" href="#car" x="550" y="165" width="80" height="150"/>
+  <use xlink:href="#car" href="#car" x="730" y="165" width="80" height="150"/>
+  <g font-size="11" font-weight="700" text-anchor="middle" fill="#ffb08a">
+    <text x="410" y="352">1 · Motorra eta ECU</text>
+    <text x="590" y="352">2 · Ihes-sistemak</text>
+    <text x="770" y="352">3 · Karrozeria eta soinua</text>
   </g>
 
-  <!-- Lan-mahaiak -->
-  <g font-size="12" text-anchor="middle">
-    <rect x="70" y="120" width="160" height="80" rx="4" fill="#e8f1fb" stroke="#5b84b1" stroke-width="1.5"/>
-    <text x="150" y="157" font-weight="600" fill="#2c4a6b">Lan-mahaia 1</text><text x="150" y="174" font-size="10" fill="#5b6b7b">ESD alfonbra</text>
-    <rect x="270" y="120" width="160" height="80" rx="4" fill="#e8f1fb" stroke="#5b84b1" stroke-width="1.5"/>
-    <text x="350" y="157" font-weight="600" fill="#2c4a6b">Lan-mahaia 2</text><text x="350" y="174" font-size="10" fill="#5b6b7b">ESD alfonbra</text>
-    <rect x="70" y="250" width="160" height="80" rx="4" fill="#e8f1fb" stroke="#5b84b1" stroke-width="1.5"/>
-    <text x="150" y="287" font-weight="600" fill="#2c4a6b">Lan-mahaia 3</text><text x="150" y="304" font-size="10" fill="#5b6b7b">ESD alfonbra</text>
-    <rect x="270" y="250" width="160" height="80" rx="4" fill="#e8f1fb" stroke="#5b84b1" stroke-width="1.5"/>
-    <text x="350" y="287" font-weight="600" fill="#2c4a6b">Lan-mahaia 4</text><text x="350" y="304" font-size="10" fill="#5b6b7b">ESD alfonbra</text>
-  </g>
-  <g font-size="9" font-weight="700" text-anchor="middle" fill="#fff">
-    <circle cx="250" cy="225" r="13" fill="#1f4e9c"/><text x="250" y="228">ESD</text>
-    <circle cx="250" cy="360" r="13" fill="#1f4e9c"/><text x="250" y="363">ESD</text>
-  </g>
+  <!-- ECU diagnosia -->
+  <rect x="330" y="385" width="150" height="70" rx="4" fill="#2b1a12" stroke="#ff4500" stroke-width="1.5"/>
+  <text x="405" y="404" text-anchor="middle" font-size="11" font-weight="700" fill="#ffb08a">ECU diagnosi-gunea</text>
+  <use xlink:href="#pc" href="#pc" x="350" y="413" width="22" height="20"/><text x="361" y="446" text-anchor="middle" font-size="9" fill="#cfcfcf">PC_TAILERRA</text>
+  <rect x="410" y="416" width="34" height="16" rx="3" fill="#0f0f0f" stroke="#ffb08a"/><text x="427" y="428" text-anchor="middle" font-size="8" fill="#ffb08a">OBD</text>
+  <use xlink:href="#prn" href="#prn" x="492" y="410" width="22" height="20"/><text x="503" y="444" text-anchor="middle" font-size="9" fill="#cfcfcf">imp_t</text>
 
-  <!-- Wi-Fi AP -->
-  <circle cx="470" cy="160" r="12" fill="#fff" stroke="#555" stroke-width="1.2"/>
-  <text x="470" y="164" text-anchor="middle" font-size="9" font-weight="700" fill="#555">AP</text>
-  <text x="470" y="186" text-anchor="middle" font-size="9" fill="#777">Wi-Fi</text>
+  <!-- Piezen biltegia -->
+  <rect x="560" y="385" width="230" height="50" rx="4" fill="#262016" stroke="#a3824a" stroke-width="1.5"/>
+  <text x="675" y="406" text-anchor="middle" font-size="11" font-weight="700" fill="#e7d3a8">Piezen biltegia</text>
+  <text x="675" y="422" text-anchor="middle" font-size="9" fill="#bfae8a">Apalak: ihes-sistemak, filtroak, bozgorailuak</text>
 
-  <!-- Proba-mahaia -->
-  <rect x="560" y="340" width="180" height="70" rx="4" fill="#fff4ec" stroke="#ff4500" stroke-width="1.5"/>
-  <text x="650" y="370" text-anchor="middle" font-size="12" font-weight="600" fill="#a83300">Proba-mahaia</text>
-  <text x="650" y="387" text-anchor="middle" font-size="10" fill="#7a4a30">Elikadura-iturriak eta osagaiak</text>
+  <!-- Tresna-horma -->
+  <rect x="860" y="380" width="28" height="200" rx="3" fill="#262016" stroke="#a3824a" stroke-width="1.5"/>
+  <text x="874" y="480" text-anchor="middle" font-size="10" font-weight="700" fill="#e7d3a8" transform="rotate(-90 874 480)">Tresna-horma · konpresorea</text>
 
-  <!-- Biltegia eta tresnak -->
-  <rect x="60" y="420" width="175" height="55" rx="4" fill="#f3ead9" stroke="#9c7b45" stroke-width="1.5"/>
-  <text x="147" y="444" text-anchor="middle" font-size="12" font-weight="600" fill="#6b5226">Osagaien biltegia</text>
-  <text x="147" y="461" text-anchor="middle" font-size="10" fill="#8a7350">Apalak (RAM, diskoak, kableak)</text>
-  <rect x="255" y="420" width="185" height="55" rx="4" fill="#f3ead9" stroke="#9c7b45" stroke-width="1.5"/>
-  <text x="347" y="444" text-anchor="middle" font-size="12" font-weight="600" fill="#6b5226">Tresna-armairua</text>
-  <text x="347" y="461" text-anchor="middle" font-size="10" fill="#8a7350">Bihurkinak, pintzak, pasta termikoa</text>
+  <circle cx="470" cy="500" r="11" fill="none" stroke="#60a5fa" stroke-width="1.5"/><text x="470" y="504" text-anchor="middle" font-size="8" font-weight="700" fill="#60a5fa">AP</text>
 
   <!-- Hondakinen gunea -->
-  <rect x="480" y="450" width="260" height="150" rx="6" fill="#e9f5ec" stroke="#3a8a4f" stroke-width="1.5"/>
-  <text x="610" y="472" text-anchor="middle" font-size="12" font-weight="700" fill="#2e6b3e">Hondakinen gunea</text>
-  <g font-size="9" text-anchor="middle" font-weight="600">
-    <rect x="490" y="485" width="44" height="44" rx="3" fill="#f2c94c" stroke="#555"/><text x="512" y="511" fill="#333">RAEE</text>
-    <rect x="539" y="485" width="44" height="44" rx="3" fill="#e67e22" stroke="#555"/><text x="561" y="511" fill="#fff">Pilak</text>
-    <rect x="588" y="485" width="44" height="44" rx="3" fill="#8e9aa3" stroke="#555"/><text x="610" y="511" fill="#fff">Metala</text>
-    <rect x="637" y="485" width="44" height="44" rx="3" fill="#fff3c4" stroke="#555"/><text x="659" y="511" fill="#333">Plastik.</text>
-    <rect x="686" y="485" width="44" height="44" rx="3" fill="#4a4a4a" stroke="#555"/><text x="708" y="511" fill="#fff">Arrunt.</text>
+  <rect x="540" y="500" width="300" height="190" rx="6" fill="#13241a" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="690" y="522" text-anchor="middle" font-size="12" font-weight="800" fill="#86efac">HONDAKINEN GUNEA</text>
+  <g font-size="9" font-weight="700" text-anchor="middle">
+    <rect x="555" y="536" width="50" height="50" rx="4" fill="#78350f" stroke="#111"/><text x="580" y="565" fill="#fde68a">Olioa</text>
+    <rect x="611" y="536" width="50" height="50" rx="4" fill="#ea580c" stroke="#111"/><text x="636" y="565" fill="#fff">Bateriak</text>
+    <rect x="667" y="536" width="50" height="50" rx="4" fill="#3f3f46" stroke="#111"/><circle cx="692" cy="561" r="15" fill="none" stroke="#a1a1aa" stroke-width="5"/>
+    <rect x="723" y="536" width="50" height="50" rx="4" fill="#eab308" stroke="#111"/><text x="748" y="565" fill="#111">RAEE</text>
+    <rect x="779" y="536" width="50" height="50" rx="4" fill="#52525b" stroke="#111"/><text x="804" y="565" fill="#fff">Arrunt.</text>
   </g>
-  <text x="610" y="555" text-anchor="middle" font-size="10" fill="#2e6b3e">Gestore baimendua: Ecolec / Ecotic</text>
-  <text x="610" y="571" text-anchor="middle" font-size="10" fill="#2e6b3e">Datuak ezabatu entregatu aurretik</text>
-
-  <!-- Seinaleak -->
-  <rect x="48" y="492" width="34" height="18" rx="2" fill="#1e8449"/><text x="65" y="505" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">IRT</text>
-  <rect x="380" y="616" width="34" height="18" rx="2" fill="#1e8449"/><text x="397" y="629" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">IRT</text>
-  <rect x="420" y="613" width="24" height="24" rx="3" fill="#1e8449"/><text x="432" y="631" text-anchor="middle" font-size="18" font-weight="700" fill="#fff">+</text>
-  <rect x="258" y="614" width="26" height="20" rx="3" fill="#c0392b"/><text x="271" y="628" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">SU</text>
-  <g transform="translate(90,612)">
-    <circle r="16" fill="#fff" stroke="#c0392b" stroke-width="4"/>
-    <line x1="-11" y1="-11" x2="11" y2="11" stroke="#c0392b" stroke-width="4"/>
+  <g font-size="8.5" text-anchor="middle" fill="#a7f3d0">
+    <text x="580" y="600">Olio erabilia</text><text x="636" y="600">Bateriak</text><text x="692" y="600">Pneumatikoak</text><text x="748" y="600">Informatika</text><text x="804" y="600">Arruntak</text>
   </g>
+  <text x="690" y="630" text-anchor="middle" font-size="10" fill="#86efac">Isurketen aurkako erretilua · edukiontzi itxiak</text>
+  <text x="690" y="648" text-anchor="middle" font-size="10" fill="#86efac">Kudeatzaile baimenduak (Ecolec, Ecotic, Garbigunea)</text>
+  <text x="690" y="666" text-anchor="middle" font-size="10" fill="#86efac">RAEE: diskoak ezabatu entregatu aurretik</text>
 
-  <!-- Legenda -->
-  <text x="790" y="104" font-size="15" font-weight="700" fill="#0f0f0f">Legenda</text>
-  <g font-size="12" fill="#333">
-    <rect x="790" y="120" width="30" height="16" rx="2" fill="#1e8449"/><text x="805" y="132" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">IRT</text><text x="830" y="133">Larrialdi-irteera</text>
-    <rect x="793" y="146" width="24" height="18" rx="3" fill="#c0392b"/><text x="805" y="159" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">SU</text><text x="830" y="160">Su-itzalgailua (CO2)</text>
-    <polygon points="805,172 818,194 792,194" fill="#ffcc00" stroke="#333"/><text x="805" y="191" text-anchor="middle" font-size="11" font-weight="700">!</text><text x="830" y="189">Arrisku elektrikoa</text>
-    <rect x="794" y="202" width="22" height="22" rx="3" fill="#1e8449"/><text x="805" y="219" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">+</text><text x="830" y="218">Lehen sorospenak</text>
-    <circle cx="805" cy="245" r="12" fill="#1f4e9c"/><text x="805" y="248" text-anchor="middle" font-size="8" font-weight="700" fill="#fff">ESD</text><text x="830" y="243">Eskumuturreko antiestatikoa</text><text x="830" y="257">derrigorrezkoa</text>
-    <g transform="translate(805,282)"><circle r="11" fill="#fff" stroke="#c0392b" stroke-width="3"/><line x1="-8" y1="-8" x2="8" y2="8" stroke="#c0392b" stroke-width="3"/></g><text x="830" y="286">Debekatuta jan eta edan</text>
-    <g transform="translate(798,302)"><rect x="0" y="6" width="14" height="11" rx="2" fill="#5d4a6e"/><path d="M3,6 V3 A4,4 0 0,1 11,3 V6" fill="none" stroke="#5d4a6e" stroke-width="2"/></g><text x="830" y="316">Sarbide mugatua (IT soilik)</text>
+  <!-- Seinaleak tailerrean -->
+  <g transform="translate(330,500)">
+    <circle cx="14" cy="14" r="14" fill="#1d4ed8"/><text x="14" y="18" text-anchor="middle" font-size="9" font-weight="800" fill="#fff">BEB</text>
   </g>
+  <rect x="330" y="545" width="26" height="26" rx="4" fill="#16a34a"/><text x="343" y="565" text-anchor="middle" font-size="20" font-weight="800" fill="#fff">+</text>
+  <rect x="330" y="600" width="30" height="20" rx="3" fill="#dc2626"/><text x="345" y="614" text-anchor="middle" font-size="9" font-weight="800" fill="#fff">SU</text>
+  <rect x="808" y="700" width="30" height="20" rx="3" fill="#dc2626"/><text x="823" y="714" text-anchor="middle" font-size="9" font-weight="800" fill="#fff">SU</text>
+  <rect x="852" y="596" width="40" height="20" rx="3" fill="#16a34a"/><text x="872" y="610" text-anchor="middle" font-size="10" font-weight="800" fill="#fff">IRT</text>
+  <rect x="88" y="236" width="40" height="20" rx="3" fill="#16a34a"/><text x="108" y="250" text-anchor="middle" font-size="10" font-weight="800" fill="#fff">IRT</text>
+  <rect x="60" y="244" width="22" height="20" rx="3" fill="#dc2626"/><text x="71" y="258" text-anchor="middle" font-size="9" font-weight="800" fill="#fff">SU</text>
+  <rect x="306" y="226" width="60" height="16" rx="3" fill="#facc15"/><text x="336" y="238" text-anchor="middle" font-size="8" font-weight="800" fill="#111">LANGILEAK</text>
 
-  <text x="790" y="360" font-size="15" font-weight="700" fill="#0f0f0f">Hondakinak</text>
-  <g font-size="12" fill="#333">
-    <rect x="792" y="374" width="22" height="16" rx="2" fill="#f2c94c" stroke="#555"/><text x="824" y="387">RAEE: ekipo eta osagai zaharrak</text>
-    <rect x="792" y="400" width="22" height="16" rx="2" fill="#e67e22" stroke="#555"/><text x="824" y="413">Pilak eta bateriak</text>
-    <rect x="792" y="426" width="22" height="16" rx="2" fill="#8e9aa3" stroke="#555"/><text x="824" y="439">Metala (torlojuak, txasisak)</text>
-    <rect x="792" y="452" width="22" height="16" rx="2" fill="#fff3c4" stroke="#555"/><text x="824" y="465">Plastikoa eta ontziak</text>
-    <rect x="792" y="478" width="22" height="16" rx="2" fill="#4a4a4a" stroke="#555"/><text x="824" y="491">Hondakin arruntak</text>
+  <!-- ===== LEGENDA ===== -->
+  <rect x="925" y="100" width="250" height="630" rx="10" fill="#141414" stroke="#2a2a2a"/>
+  <text x="945" y="130" font-size="15" font-weight="800" fill="#ff4500">LEGENDA</text>
+
+  <text x="945" y="158" font-size="11" font-weight="700" fill="#9ca3af">SARBIDE-MAILAK</text>
+  <g font-size="11" fill="#e5e5e5">
+    <rect x="945" y="168" width="14" height="14" rx="3" fill="#16a34a"/><text x="967" y="179">Publikoa (harrera)</text>
+    <rect x="945" y="190" width="14" height="14" rx="3" fill="#d97706"/><text x="967" y="201">Mugatua (tailerra, bulegoak)</text>
+    <rect x="945" y="212" width="14" height="14" rx="3" fill="#dc2626"/><text x="967" y="223">Murriztua (IT soilik)</text>
   </g>
 
-  <text x="790" y="535" font-size="15" font-weight="700" fill="#0f0f0f">Guneak</text>
-  <g font-size="12" fill="#333">
-    <rect x="792" y="549" width="22" height="16" rx="2" fill="#e8f1fb" stroke="#5b84b1"/><text x="824" y="562">Lan-mahaiak (muntaketa)</text>
-    <rect x="792" y="575" width="22" height="16" rx="2" fill="#f1ecf7" stroke="#5d4a6e"/><text x="824" y="588">Ekipo-gela (rack-a)</text>
-    <rect x="792" y="601" width="22" height="16" rx="2" fill="#fff4ec" stroke="#ff4500"/><text x="824" y="614">Proba-mahaia</text>
-    <rect x="792" y="627" width="22" height="16" rx="2" fill="#f3ead9" stroke="#9c7b45"/><text x="824" y="640">Biltegia eta tresnak</text>
+  <text x="945" y="256" font-size="11" font-weight="700" fill="#9ca3af">SEINALEAK</text>
+  <g font-size="11" fill="#e5e5e5">
+    <rect x="945" y="266" width="30" height="16" rx="3" fill="#16a34a"/><text x="960" y="278" text-anchor="middle" font-size="8" font-weight="800" fill="#fff">IRT</text><text x="984" y="278">Larrialdi-irteera</text>
+    <rect x="945" y="290" width="30" height="16" rx="3" fill="#dc2626"/><text x="960" y="302" text-anchor="middle" font-size="8" font-weight="800" fill="#fff">SU</text><text x="984" y="302">Su-itzalgailua</text>
+    <polygon points="960,312 972,332 948,332" fill="#facc15" stroke="#111"/><text x="960" y="330" text-anchor="middle" font-size="11" font-weight="800" fill="#111">!</text><text x="984" y="328">Arrisku elektrikoa</text>
+    <rect x="950" y="340" width="20" height="20" rx="3" fill="#16a34a"/><text x="960" y="356" text-anchor="middle" font-size="16" font-weight="800" fill="#fff">+</text><text x="984" y="355">Lehen sorospenak</text>
+    <circle cx="960" cy="378" r="11" fill="#1d4ed8"/><text x="960" y="381" text-anchor="middle" font-size="7" font-weight="800" fill="#fff">BEB</text><text x="984" y="376">Babes-ekipoa</text><text x="984" y="389">derrigorrezkoa</text>
+    <rect x="945" y="400" width="30" height="14" rx="3" fill="#facc15"/><text x="984" y="411">Langileak soilik</text>
+    <g transform="translate(953,420)"><rect x="0" y="6" width="13" height="10" rx="2" fill="#c4b5fd"/><path d="M3,6 V3 A3.5,3.5 0 0,1 10,3 V6" fill="none" stroke="#c4b5fd" stroke-width="2"/></g><text x="984" y="435">Txartelarekin sartzea</text>
   </g>
+
+  <text x="945" y="470" font-size="11" font-weight="700" fill="#9ca3af">EKIPOAK</text>
+  <g font-size="11" fill="#e5e5e5">
+    <use xlink:href="#pc" href="#pc" x="948" y="478" width="22" height="20"/><text x="984" y="493">Ordenagailua</text>
+    <use xlink:href="#prn" href="#prn" x="948" y="504" width="22" height="20"/><text x="984" y="519">Inprimagailua</text>
+    <circle cx="959" cy="541" r="10" fill="none" stroke="#60a5fa" stroke-width="1.5"/><text x="959" y="544" text-anchor="middle" font-size="7" font-weight="700" fill="#60a5fa">AP</text><text x="984" y="545">Wi-Fi sarbide-puntua</text>
+    <rect x="948" y="558" width="22" height="16" fill="none" stroke="#ff4500" stroke-width="1.5" stroke-dasharray="4 3"/><text x="984" y="571">Altxagailua (lan-gunea)</text>
+  </g>
+
+  <text x="945" y="606" font-size="11" font-weight="700" fill="#9ca3af">HONDAKINAK</text>
+  <g font-size="10.5" fill="#e5e5e5">
+    <rect x="945" y="616" width="14" height="14" rx="2" fill="#78350f"/><text x="967" y="627">Olio erabilia</text>
+    <rect x="1060" y="616" width="14" height="14" rx="2" fill="#ea580c"/><text x="1082" y="627">Bateriak</text>
+    <rect x="945" y="638" width="14" height="14" rx="2" fill="#3f3f46"/><text x="967" y="649">Pneumatikoak</text>
+    <rect x="1060" y="638" width="14" height="14" rx="2" fill="#eab308"/><text x="1082" y="649">RAEE</text>
+    <rect x="945" y="660" width="14" height="14" rx="2" fill="#52525b"/><text x="967" y="671">Hondakin arruntak</text>
+  </g>
+  <text x="945" y="708" font-size="9.5" fill="#6b6b6b">3. taldea · 1. Erronka</text>
 </svg>
