@@ -31,7 +31,7 @@ title: Hasiera
 <section class="home-section">
   <h2>Dokumentazioa</h2>
   <div class="cards">
-    <a class="card" href="{{ '/1-wae.html' | relative_url }}"><span class="card-code">WAE</span><span class="card-title">Web Aplikazioak</span><span class="card-desc">WordPress enpresa-ataria eta GLPI txartel- eta inbentario-sistema.</span></a>
+    <a class="card" href="{{ '/1-wae.html' | relative_url }}"><span class="card-code">WAE</span><span class="card-title">Web Aplikazioak</span><span class="card-desc">WordPress, GLPI, GitHub biltegia eta erronkaren plangintza.</span></a>
     <a class="card" href="{{ '/2-sistema-eragileak.html' | relative_url }}"><span class="card-code">SEA</span><span class="card-title">Sistema Eragileak</span><span class="card-desc">Active Directory, OUak, GPOak, karpeta partekatuak eta inprimaketa.</span></a>
     <a class="card" href="{{ '/3-sare-zerbitzuak.html' | relative_url }}"><span class="card-code">SZI</span><span class="card-title">Sare Zerbitzuak</span><span class="card-desc">DNS eremuak, DHCP eta Jitsi Meet audio eta bideo zerbitzua.</span></a>
     <a class="card" href="{{ '/4-sistema-banatuak.html' | relative_url }}"><span class="card-code">SB</span><span class="card-title">Sistema Banatuak</span><span class="card-desc">Birtualizazioa, makina birtualak, edukiontziak eta erabilgarritasun handia.</span></a>
