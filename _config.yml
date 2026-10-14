@@ -1,0 +1,46 @@
+title: TungTunning
+description: "Proiektuaren dokumentazioa · 3. taldea · 1. Erronka"
+lang: eu
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Albo-menua (ordena eta testuak hemen aldatzen dira)
+nav:
+  - title: Hasiera
+    url: /
+    code: "⌂"
+    desc: Proiektuaren laburpena
+  - title: WAE
+    url: /1-wae.html
+    code: WAE
+    desc: Web aplikazioak
+  - title: Sistema Eragileak
+    url: /2-sistema-eragileak.html
+    code: SEA
+    desc: AD, GPO eta inprimaketa
+  - title: Sare Zerbitzuak
+    url: /3-sare-zerbitzuak.html
+    code: SZI
+    desc: DNS, DHCP eta Jitsi
+  - title: Sistema Banatuak
+    url: /4-sistema-banatuak.html
+    code: SB
+    desc: Birtualizazioa eta HA
+  - title: Datu-baseak
+    url: /5-datu-baseak.html
+    code: DB
+    desc: MySQL eta MongoDB
+  - title: Segurtasuna
+    url: /6-segurtasuna.html
+    code: SEG
+    desc: pfSense, IDS eta VPN
+  - title: Hardwarea
+    url: /7-hardware.html
+    code: HW
+    desc: Ekipamendua eta aurrekontua
+  - title: Jasangarritasuna
+    url: /8-jasangarritasuna.html
+    code: IRAU
+    desc: ESG plana eta GJHak
