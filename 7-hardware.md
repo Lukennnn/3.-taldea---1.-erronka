@@ -166,14 +166,21 @@ Ekipo informatikoak **RAEE** (Tresna Elektriko eta Elektronikoen Hondakinak) dir
 
 ## 10. Tailerraren planoa
 
-Tailer informatikoaren planoan honako hauek adierazi behar dira:
-- **Elementu guztiak:** lan-mahaiak, ekipoak, biltegia, tresna-armairuak, rack-a.
-- **Hondakin-edukiontziak:** RAEE, metal, plastiko eta hondakin arruntentzako bereiziak.
-- **Arrisku-seinaleak:** elektrizitate-arriskua, larrialdietako irteerak, su-itzalgailuak, lehen sorospenetarako kutxa.
+TungTunningen informatika-tailerraren planoa egin dugu: elementu bakoitza non dagoen, hondakin-edukiontziak eta arrisku-seinaleak adierazita.
 
-<!-- Planoa: marrazketa-tresna batekin sortu (draw.io, Visio...) eta hemen txertatu. Elementuak, edukiontziak eta seinaleak argi adierazi. -->
-![](irudiak/hw-02-planoa.png)
+![TungTunning informatika-tailerraren planoa](irudiak/hw-02-planoa.svg)
 
+Elementuak honela kokatu ditugu:
+
+- **Lan-mahaiak** (4) tailerraren erdian daude, eta bakoitzak **ESD alfonbra** du. Mahaien artean ESD seinaleak daude, eskumuturreko antiestatikoa derrigorrezkoa dela gogorarazteko (ikus 7. atala).
+- **Ekipo-gela** gune itxi eta bereizi bat da, **IT sailarentzat soilik** (txartelarekin sartzen da, *Segurtasuna* dokumentuko sarbide fisikoaren politikaren arabera). Bertan dago **rack-a** (19" 18U): router/firewall, switch kudeatua 24p PoE+, patch panela, zerbitzari fisikoa, NAS (babeskopiak) eta SAI 1500VA (ikus 3. atala).
+- **Koadro elektrikoa** ekipo-gelan dago, **arrisku elektrikoaren seinalearekin**, eta ondoan **CO2zko su-itzalgailua**. CO2 erabiltzen dugu urak edo hautsak ekipo elektronikoak hondatzen dituztelako.
+- **Proba-mahaia** ekipo-gelaren ondoan dago, elikadura-iturriak eta osagaiak probatzeko, lan-mahaietatik bereizita.
+- **Osagaien biltegia** (apalak) eta **tresna-armairua** (bihurkinak, pintzak, pasta termikoa...) lan-mahaietatik gertu daude, muntaketan eskura izateko.
+- **Hondakinen gunea** sarreratik gertu dago, edukiontziak ateratzeko tailer osoa zeharkatu behar ez izateko. Bost edukiontzi bereizi: **RAEE**, **pilak eta bateriak**, **metala**, **plastikoa** eta **hondakin arruntak**. RAEE gestore baimenduari entregatzen zaio, diskoetako datuak ezabatu ondoren (ikus 9. atala).
+- **Bi larrialdi-irteera** daude, sarreran eta ezkerreko horman, biak seinaleztatuta. Sarreran bigarren **su-itzalgailua** eta **lehen sorospenetako kutxa** daude.
+- **Wi-Fi sarbide-puntu** bat dago sabaian, tailerreko gailuentzat.
+- Tailerrean **debekatuta dago jatea eta edatea**, likido batek ekipo bat hondatu edo zirkuitulabur bat eragin dezakeelako.
 
 ---
 
